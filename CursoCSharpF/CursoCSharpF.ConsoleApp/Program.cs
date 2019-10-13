@@ -10,28 +10,65 @@ namespace CursoCSharpF.ConsoleApp
     {
         static void Main(string[] args)
         {
-            // Ctrl+K+C: Transforma em texto
-            //cw+tab+tab: Escreve Console.write
+            Console.Write("Digite um numero:");
+            int numeroHum = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("======= Cadastro de Pessoa ==========");
+            Console.Write("Digite um segundo numero:");
+            int numeroDois = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Escreva o nome: ");
-            string primeiroNome = Console.ReadLine();
+            int resultado = Soma(numeroHum, numeroDois);
 
-            Console.Write("Escreva o sobrenome: ");
-            string sobrenome = Console.ReadLine();
+            Console.WriteLine($"Resultado Soma: {resultado}");
 
-            Console.Write("Escreva sua idade: ");
-            int idade = Convert.ToInt32( Console.ReadLine() );
+            resultado = Multipli(numeroHum, numeroDois);
 
-            Console.WriteLine("=====================================");
+            Console.WriteLine($"Resultado Multiplicação: {resultado}");
 
-            // Imprimindo com concatenação
-            Console.WriteLine("Seu nome é: " + primeiroNome + " Sobrenome: " + sobrenome + " Idade: " + idade);
-            // Imprimindo com interpolação de strings
-            Console.WriteLine($"Seu nome é: {primeiroNome} Sobrenome: {sobrenome} Idade: {idade}");
+            resultado = Subtracao(numeroHum, numeroDois);
+
+            Console.WriteLine($"Resultado Subtracao: {resultado}");
+
+            resultado = Divisao(numeroHum, numeroDois);
+
+            Console.WriteLine($"Resultado Divisão: {resultado}");
+
+            resultado = RestoDiv(numeroHum, numeroDois);
+
+            Console.WriteLine($"Resto da divisão: {resultado}");
 
             Console.ReadLine();
+        }
+
+        static int Soma(int n1, int n2)
+        {
+            int resultadoSoma = n1 + n2;
+
+            return resultadoSoma;
+
+        }
+        static int Multipli(int n1, int n2)
+        {
+            int resultadoMultipli = n1 * n2;
+
+            return resultadoMultipli;
+        }
+        static int Subtracao(int n1, int n2)
+        {
+            int resultadoSubtracao = n1 - n2;
+
+            return resultadoSubtracao;
+        }
+        static int Divisao(int n1, int n2)
+        {
+            int resultadoDivisao = n1 / n2;
+
+            return resultadoDivisao;
+        }
+        static int RestoDiv(int n1, int n2)
+        {
+            int RestoDiv = n1 % n2;
+
+            return RestoDiv;
         }
     }
 }
