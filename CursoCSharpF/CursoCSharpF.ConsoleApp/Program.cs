@@ -10,6 +10,9 @@ namespace CursoCSharpF.ConsoleApp
     {
         static void Main(string[] args)
         {
+            // Ctrl+K+C: Transforma em texto
+            //cw+tab+tab: Escreve Console.write
+
             Console.WriteLine("======= Cadastro de Pessoa ==========");
 
             Console.Write("Escreva o nome: ");
@@ -23,7 +26,9 @@ namespace CursoCSharpF.ConsoleApp
 
             Console.WriteLine("=====================================");
 
+            // Imprimindo com concatenação
             Console.WriteLine("Seu nome é: " + primeiroNome + " Sobrenome: " + sobrenome + " Idade: " + idade);
+            // Imprimindo com interpolação de strings
             Console.WriteLine($"Seu nome é: {primeiroNome} Sobrenome: {sobrenome} Idade: {idade}");
 
             Console.ReadLine();
